@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Anand & Nissin Wedding</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Great+Vibes&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="bg-glow"></div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo-wrap">
+
+            <img
+                src="AN_logo.png"
+                alt="AN Logo"
+                class="main-logo"
+            >
+
+            <div class="logo-text">
+                ANAND & NISSIN
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero-section">
+
+        <div class="hero-card">
+
+            <h1 class="hero-title">
+                ANAND
+                <span>WEDS</span>
+                NISSIN
+            </h1>
+
+            <div class="gold-divider"></div>
+
+            <p class="hero-subtext">
+                INVITE YOU TO CELEBRATE THEIR WEDDING
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#invitation"
+                    class="invite-btn"
+                >
+                    VIEW INVITATION
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- INVITATION -->
+
+    <section
+        class="section"
+        id="invitation"
+    >
+
+        <div class="invitation-card">
+
+            <div>
+
+                <p class="section-mini-title">
+                    TOGETHER WITH THEIR FAMILIES
+                </p>
+
+                <div class="family-grid">
+
+                    <div>
+
+                        <h3 class="person-name">
+                            ANAND DAVID
+                        </h3>
+
+                        <p class="parent-text">
+                            S/o Mrs. Anitha David
+                            & Mr. David Vincent
+                        </p>
+
+                        <p class="address-text">
+                            Puthoor House,<br>
+                            Kurumala, Chelakkara,<br>
+                            Thrissur
+                        </p>
+
+                    </div>
+
+                    <div>
+
+                        <h3 class="person-name">
+                            NISSIN MARY BINU
+                        </h3>
+
+                        <p class="parent-text">
+                            D/o Mrs. Leena Binu
+                            & Mr. Binu P Abraham
+                        </p>
+
+                        <p class="address-text">
+                            Pulikkottil House,<br>
+                            St. Grigorious Road,<br>
+                            Pazhanji, Thrissur
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div>
+
+                <h2 class="couple-title">
+                    ANAND <span>&</span> NISSIN
+                </h2>
+
+                <p class="wedding-date">
+                    MONDAY, 13 JULY 2026<br>
+                    10:00 AM
+                </p>
+
+                <p class="blessing-text">
+                    Request the honour of your presence
+                    and blessings on their wedding day
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COUNTDOWN -->
+
+    <section class="section">
+
+        <div class="countdown-card">
+
+            <h2 class="section-title">
+                Countdown To Our Big Day
+            </h2>
+
+            <div class="countdown-scroll">
+
+                <div class="countdown-row">
+
+                    <div class="time-box">
+                        <h3 id="days">00</h3>
+                        <span>DAYS</span>
+                    </div>
+
+                    <div class="time-box">
+                        <h3 id="hours">00</h3>
+                        <span>HOURS</span>
+                    </div>
+
+                    <div class="time-box">
+                        <h3 id="minutes">00</h3>
+                        <span>MINUTES</span>
+                    </div>
+
+                    <div class="time-box">
+                        <h3 id="seconds">00</h3>
+                        <span>SECONDS</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <p class="countdown-text">
+                WE CAN'T WAIT TO CELEBRATE WITH YOU
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- CALENDAR -->
+
+    <section class="section">
+
+        <div class="calendar-card">
+
+            <h2 class="section-title">
+                Mark Your Calendar
+            </h2>
+
+            <p class="calendar-subtext">
+                CLICK BELOW TO ADD THE EVENT
+                TO YOUR CALENDAR
+            </p>
+
+            <a
+                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Anand+%26+Nissin+Wedding&dates=20260713T043000Z/20260713T073000Z&details=Wedding+Ceremony&location=Thrissur"
+                target="_blank"
+                class="calendar-btn"
+            >
+                MARK YOUR CALENDAR
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <h2>
+            Anand & Nissin
+        </h2>
+
+        <p>
+            SEE YOU AT THE WEDDING
+        </p>
+
+    </footer>
+
+    <!-- COUNTDOWN -->
+
+    <script>
+
+        const weddingDate = new Date("July 13, 2026 10:00:00").getTime();
+
+        setInterval(() => {
+
+            const now = new Date().getTime();
+
+            const distance = weddingDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            const hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24))
+                / (1000 * 60 * 60)
+            );
+
+            const minutes = Math.floor(
+                (distance % (1000 * 60 * 60))
+                / (1000 * 60)
+            );
+
+            const seconds = Math.floor(
+                (distance % (1000 * 60))
+                / 1000
+            );
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+        }, 1000);
+
+    </script>
+
+</body>
+
+</html>
