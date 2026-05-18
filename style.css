@@ -103,9 +103,9 @@ body{
 
 .main-logo{
 
-    width:54px;
+    width:57px;
 
-    height:54px;
+    height:57px;
 
     object-fit:contain;
 
@@ -119,7 +119,7 @@ body{
 
     letter-spacing:3px;
 
-    font-size:11px;
+    font-size:12px;
 
     color:#f7e8dc;
 
@@ -157,7 +157,7 @@ body{
     text-align:center;
 
     animation:
-    floatCard 5s ease-in-out infinite;
+    floatCard 6.5s cubic-bezier(0.22,1,0.36,1) infinite;
 }
 
 @keyframes floatCard{
@@ -167,7 +167,7 @@ body{
     }
 
     50%{
-        transform:translateY(-8px);
+        transform:translateY(-6px);
     }
 
     100%{
@@ -212,6 +212,8 @@ body{
     font-weight:500;
 
     white-space:nowrap;
+
+    text-shadow:0 0 18px rgba(232,194,142,0.18);
 }
 
 .gold-divider{
@@ -220,13 +222,14 @@ body{
 
     height:2px;
 
-    background:#e4c089;
+    background:linear-gradient(90deg, rgba(255,237,186,1), rgba(228,192,137,1), rgba(255,241,200,1));
 
     margin:
     38px auto 32px;
 
     box-shadow:
-    0 0 18px rgba(228,192,137,0.45);
+    0 0 22px rgba(238,200,132,0.32),
+    inset 0 0 4px rgba(255,243,203,0.28);
 }
 
 .hero-subtext{
@@ -239,11 +242,13 @@ body{
 
     margin-bottom:42px;
 
-    color:#f3e2d8;
+    color:#fbebdf;
 
     font-weight:500;
 
     white-space:nowrap;
+
+    text-shadow:0 2px 16px rgba(255,229,182,0.16);
 }
 
 .hero-buttons{
@@ -878,6 +883,343 @@ body{
     z-index:2;
 }
 
+/* VENUE SECTION */
+
+.venue-section{
+
+    padding:42px 16px 26px;
+}
+
+.venue-section-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    max-width:980px;
+
+    margin:0 auto;
+
+    padding:34px 20px;
+
+    border-radius:36px;
+
+    background:
+    rgba(255,255,250,0.14);
+
+    backdrop-filter:blur(26px);
+
+    -webkit-backdrop-filter:blur(26px);
+
+    border:1px solid rgba(255,255,255,0.16);
+
+    box-shadow:
+    0 20px 50px rgba(0,0,0,0.16),
+    0 32px 90px rgba(0,0,0,0.18);
+}
+
+.venue-section-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:radial-gradient(circle at top, rgba(255,244,220,0.12), transparent 38%);
+}
+
+.venue-section-title{
+
+    color:#f7e3d1;
+
+    text-shadow:0 0 18px rgba(241,203,141,0.16);
+
+    margin:0 auto 28px;
+
+    text-align:center;
+
+    width:100%;
+}
+
+.venue-list{
+
+    display:grid;
+
+    gap:22px;
+}
+
+.venue-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    padding:24px 18px;
+
+    border-radius:28px;
+
+    background:rgba(252,246,239,0.96);
+
+    border:1px solid rgba(239,227,214,0.56);
+
+    box-shadow:
+    0 18px 40px rgba(0,0,0,0.10),
+    0 10px 24px rgba(0,0,0,0.06);
+
+    transition:
+    transform 280ms ease,
+    box-shadow 280ms ease,
+    background-color 280ms ease;
+}
+
+.venue-item:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+    0 24px 54px rgba(0,0,0,0.14),
+    0 12px 36px rgba(0,0,0,0.09);
+}
+
+.venue-item-title{
+
+    font-size:14px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#7c5d47;
+
+    font-weight:700;
+
+    text-align:center;
+}
+
+.venue-map-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    min-height:190px;
+
+    background:#f7efe4;
+
+    box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.32);
+
+    transition:
+    transform 320ms ease,
+    box-shadow 320ms ease;
+}
+
+.venue-map-card:hover{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+    0 16px 45px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.28);
+}
+
+.venue-map-preview{
+
+    width:100%;
+
+    height:100%;
+
+    border:0;
+
+    display:block;
+
+    transform-origin:center;
+
+    transition:transform 560ms ease;
+}
+
+.venue-map-card:hover .venue-map-preview{
+
+    transform:scale(1.02);
+}
+
+.venue-map-blocker{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:2;
+
+    cursor:pointer;
+
+    text-decoration:none;
+}
+
+.venue-address{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#7b5f4e;
+
+    line-height:1.92;
+
+    font-size:15px;
+
+    font-weight:500;
+
+    letter-spacing:0.32px;
+
+    text-shadow:0 1px 2px rgba(255,250,244,0.16);
+}
+
+.venue-action-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+}
+
+.venue-icon{
+
+    width:60px;
+
+    height:60px;
+
+    min-width:60px;
+
+    border-radius:16px;
+
+    background:rgba(255,249,241,0.96);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+    inset 0 1px 3px rgba(255,255,255,0.7),
+    0 6px 18px rgba(0,0,0,0.08);
+}
+
+.venue-icon img{
+
+    width:48px;
+
+    height:auto;
+
+    display:block;
+}
+
+.venue-btn{
+
+    position:relative;
+
+    width:100%;
+
+    max-width:210px;
+
+    padding:18px 22px;
+
+    border-radius:16px;
+
+    background:
+    linear-gradient(135deg, #7b001f, #c2184b);
+
+    color:white;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+    box-shadow:
+    0 0 0 1px rgba(255,215,160,0.25),
+    0 10px 28px rgba(122,0,31,0.22);
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    transition:
+    transform 280ms ease,
+    box-shadow 280ms ease,
+    filter 280ms ease;
+}
+
+.venue-btn:hover,
+.venue-btn:focus-visible{
+
+    transform:translateY(-1px);
+
+    box-shadow:
+    0 0 0 1px rgba(255,215,160,0.30),
+    0 16px 38px rgba(122,0,31,0.28);
+}
+
+.venue-btn::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:80%;
+
+    height:100%;
+
+    background:
+    linear-gradient(120deg, transparent, rgba(255,255,255,0.42), transparent);
+
+    transform:skewX(-20deg);
+
+    animation:shine 4s infinite;
+}
+
+.fade-scroll-section,
+.fade-scroll{
+
+    opacity:0;
+
+    transform:translateY(18px);
+
+    transition:opacity 900ms ease, transform 900ms ease;
+}
+
+.fade-scroll.visible,
+.fade-scroll-section.visible{
+
+    opacity:1;
+
+    transform:translateY(0);
+}
+
 /* FOOTER */
 
 .footer{
@@ -924,4 +1266,801 @@ body{
 
         padding:42px 18px 36px;
     }
+
+    .venue-section-card{
+
+        padding:28px 16px;
+    }
+
+    .venue-map-card{
+
+        min-height:170px;
+    }
+
+    .venue-action-row{
+
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+    .venue-btn{
+
+        max-width:none;
+
+        width:100%;
+    }
+
+    .venue-icon{
+
+        margin-bottom:8px;
+    }
 }
+
+/* INTRO OVERLAY - Cinematic intro animation */
+
+body.intro-active{
+    overflow:hidden;
+}
+
+body.intro-active > *:not(#intro-overlay){
+    visibility:hidden;
+    opacity:0;
+    pointer-events:none;
+}
+
+body.intro-active.intro-revealing > *:not(#intro-overlay){
+    visibility:visible;
+    opacity:1;
+    transition:opacity 1200ms cubic-bezier(0.22,1,0.36,1);
+}
+
+#intro-overlay{
+    position:fixed;
+    inset:0;
+    z-index:2000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    pointer-events:auto;
+    cursor:pointer;
+}
+
+.intro-backdrop{
+    position:absolute;
+    inset:0;
+    background:radial-gradient(circle at center, rgba(12,12,16,0.85), rgba(4,4,6,0.95));
+    backdrop-filter: blur(12px) saturate(110%);
+    -webkit-backdrop-filter: blur(12px) saturate(110%);
+    transition: opacity 800ms ease;
+    z-index:1;
+}
+
+.intro-envelope{
+    position:absolute;
+    inset:0;
+    z-index:2;
+    overflow:hidden;
+    pointer-events:none;
+}
+
+.envelope-panel{
+    position:absolute;
+    top:-10%;
+    bottom:-10%;
+    width:65vw;
+    background: linear-gradient(135deg, #f9f5f0 0%, #e2cdb6 50%, #c4a686 100%);
+    box-shadow: 0 0 60px rgba(0,0,0,0.8), inset 0 0 80px rgba(139,100,50,0.08);
+    transition: transform 1100ms cubic-bezier(0.22,1,0.36,1);
+    will-change: transform;
+}
+
+.envelope-left{
+    left:-15vw;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+    transform-origin: left center;
+    background: linear-gradient(110deg, #f8f3ec 0%, #e8d5c0 80%, #cca984 100%);
+}
+
+.envelope-right{
+    right:-15vw;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    transform-origin: right center;
+    background: linear-gradient(-110deg, #f8f3ec 0%, #e8d5c0 80%, #cca984 100%);
+}
+
+#intro-overlay.opening .envelope-left{
+    transform: translateX(-100%);
+}
+
+#intro-overlay.opening .envelope-right{
+    transform: translateX(100%);
+}
+
+.intro-content{
+    position:relative;
+    z-index:3;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.intro-logo-wrap{
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:clamp(160px, 35vw, 340px);
+    height:clamp(160px, 35vw, 340px);
+    animation: floatingLogo 4s ease-in-out infinite;
+}
+
+@keyframes floatingLogo{
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+.intro-logo{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    transform-origin:center center;
+    filter:drop-shadow(0 15px 35px rgba(0,0,0,0.5));
+    will-change:transform, opacity;
+}
+
+.intro-logo-glow{
+    position:absolute;
+    inset:-20%;
+    border-radius:50%;
+    pointer-events:none;
+    background:radial-gradient(circle at center, rgba(232,194,142,0.35), transparent 60%);
+    filter:blur(20px);
+    animation: glowingLogo 4s ease-in-out infinite;
+}
+
+@keyframes glowingLogo{
+    0% { opacity: 0.5; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.08); }
+    100% { opacity: 0.5; transform: scale(1); }
+}
+
+.intro-tap-text{
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 13px;
+    letter-spacing: 12px;
+    color: #f7e8dc;
+    text-shadow: 0 0 15px rgba(232,194,142,0.6);
+    animation: tapBreathing 2.5s ease-in-out infinite;
+    text-align:center;
+}
+
+@keyframes tapBreathing{
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+
+#intro-overlay.opening .intro-logo-wrap,
+#intro-overlay.opening .intro-tap-text,
+#intro-overlay.opening .intro-logo-glow{
+    animation: none;
+}
+
+#intro-overlay.opening .intro-tap-text,
+#intro-overlay.opening .intro-logo-glow{
+    opacity:0;
+    transition: opacity 400ms ease;
+}
+
+#intro-overlay.opening .intro-backdrop{
+    opacity:0;
+    transition: opacity 1200ms ease 300ms;
+}
+
+#intro-overlay.faded{
+    opacity:0;
+    transition:opacity 420ms ease;
+    pointer-events:none;
+}
+
+@media(prefers-reduced-motion:reduce){
+    .intro-logo-wrap, .intro-logo-glow, .intro-tap-text{
+        animation:none !important;
+    }
+}
+
+
+
+/* =========================================
+   RESPONSIVE NORMALIZATION SYSTEM
+========================================= */
+
+/* GLOBAL CONTENT WIDTH */
+
+.hero-card,
+.invitation-card,
+.countdown-card,
+.calendar-card,
+.venue-section-card,
+.footer{
+
+    width:100%;
+
+    max-width:430px;
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* HERO TYPOGRAPHY */
+
+.hero-title{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:72px;
+
+    font-weight:400;
+
+    line-height:0.92;
+
+    color:#fff7f2;
+
+    text-shadow:
+    0 8px 30px rgba(0,0,0,0.45);
+
+    margin-bottom:18px;
+
+    text-align:center;
+}
+
+.hero-title span{
+
+    display:block;
+
+    margin:18px 0;
+
+    font-size:30px;
+
+    color:#e8c28e;
+
+    letter-spacing:8px;
+
+    font-weight:500;
+
+    text-shadow:
+    0 0 18px rgba(232,194,142,0.18);
+
+    text-align:center;
+}
+
+.hero-subtext{
+
+    font-size:12px;
+
+    letter-spacing:3px;
+
+    line-height:2;
+
+    margin-bottom:42px;
+
+    color:#fbebdf;
+
+    font-weight:500;
+
+    text-shadow:
+    0 2px 16px rgba(255,229,182,0.16);
+
+    text-align:center;
+}
+
+/* INVITATION */
+
+.couple-title{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:36px;
+
+    line-height:1;
+
+    font-weight:500;
+
+    margin-bottom:18px;
+
+    color:#4A2E25;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:4px;
+
+    width:100%;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    letter-spacing:0.2px;
+}
+
+.section-title{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:32px;
+
+    margin-bottom:24px;
+
+    color:#fff4ee;
+
+    text-align:center;
+
+    width:100%;
+}
+
+.person-name{
+
+    font-size:16px;
+
+    font-weight:700;
+
+    margin-bottom:14px;
+
+    color:#5A382D;
+
+    width:100%;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+    text-align:center;
+
+    line-height:1.2;
+
+    letter-spacing:0.3px;
+}
+
+.parent-text{
+
+    font-size:11px;
+
+    line-height:1.7;
+
+    font-weight:600;
+
+    margin-bottom:14px;
+
+    color:#6E5144;
+
+    text-align:center;
+}
+
+.address-text{
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    color:#85695D;
+
+    text-align:center;
+}
+
+.wedding-date{
+
+    margin-top:10px;
+
+    line-height:2;
+
+    letter-spacing:2px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    color:#65483C;
+
+    text-align:center;
+}
+
+.blessing-text{
+
+    margin-top:24px;
+
+    line-height:1.9;
+
+    color:#6B4C40;
+
+    font-size:18px;
+
+    letter-spacing:0.3px;
+
+    font-weight:400;
+
+    font-family:
+    'Great Vibes',
+    cursive;
+
+    text-align:center;
+}
+
+/* COUNTDOWN */
+
+.countdown-row{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:10px;
+
+    margin-bottom:22px;
+
+    flex-wrap:nowrap;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    scrollbar-width:none;
+
+    -webkit-overflow-scrolling:touch;
+
+    width:100%;
+}
+
+.countdown-row::-webkit-scrollbar{
+    display:none;
+}
+
+.time-box{
+
+    width:78px;
+
+    min-width:78px;
+
+    max-width:78px;
+
+    padding:18px 8px;
+
+    border-radius:20px;
+
+    background:
+    rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(10px);
+
+    flex:0 0 auto;
+}
+
+.time-box h3{
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    font-size:30px;
+
+    color:#fff4ef;
+
+    text-align:center;
+}
+
+.time-box span{
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+    text-align:center;
+
+    display:block;
+}
+
+/* VENUE */
+
+.venue-section-title{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    margin-left:auto;
+
+    margin-right:auto;
+}
+
+.venue-address{
+
+    text-align:center;
+
+    font-family:
+    'Cormorant Garamond',
+    serif;
+
+    color:#7b5f4e;
+
+    line-height:1.92;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    letter-spacing:0.32px;
+
+    text-shadow:
+    0 1px 2px rgba(255,250,244,0.16);
+}
+
+.venue-icon{
+
+    width:72px;
+
+    height:72px;
+
+    min-width:72px;
+
+    border-radius:16px;
+
+    background:
+    rgba(255,249,241,0.96);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:
+    inset 0 1px 3px rgba(255,255,255,0.7),
+    0 6px 18px rgba(0,0,0,0.08);
+}
+
+.venue-icon img{
+
+    width:58px;
+
+    height:auto;
+
+    display:block;
+}
+
+/* BUTTONS */
+
+.invite-btn,
+.calendar-btn,
+.venue-btn{
+
+    min-height:58px;
+}
+
+/* FIX SAFE AREA */
+
+body{
+
+    min-height:100svh;
+}
+
+/* STABILIZE IMAGES */
+
+img,
+iframe{
+
+    max-width:100%;
+}
+
+/* SECTION SPACING */
+
+.section{
+
+    padding-top:34px;
+    padding-bottom:34px;
+}
+
+/* =========================================
+   STANDARD PHONES
+========================================= */
+
+@media (max-width:430px){
+
+    .hero-section{
+
+        padding-top:110px;
+    }
+
+    .hero-title{
+
+        font-size:64px;
+    }
+
+    .hero-title span{
+
+        font-size:28px;
+    }
+
+    .couple-title{
+
+        font-size:34px;
+    }
+
+    .section-title{
+
+        font-size:30px;
+    }
+
+    .countdown-row{
+
+        gap:10px;
+    }
+
+    .time-box{
+
+        width:78px;
+        min-width:78px;
+        max-width:78px;
+    }
+}
+
+/* =========================================
+   COMPACT PHONES
+========================================= */
+
+@media (max-width:390px){
+
+    .hero-title{
+
+        font-size:54px;
+    }
+
+    .hero-title span{
+
+        font-size:24px;
+
+        letter-spacing:6px;
+    }
+
+    .hero-subtext{
+
+        font-size:10px;
+
+        letter-spacing:2px;
+    }
+
+    .couple-title{
+
+        font-size:28px;
+    }
+
+    .section-title{
+
+        font-size:26px;
+    }
+
+    .person-name{
+
+        font-size:13px;
+    }
+
+    .parent-text{
+
+        font-size:9px;
+    }
+
+    .address-text{
+
+        font-size:8px;
+    }
+
+    .wedding-date{
+
+        font-size:11px;
+    }
+
+    .blessing-text{
+
+        font-size:16px;
+    }
+
+    .time-box{
+
+        width:70px;
+
+        min-width:70px;
+
+        max-width:70px;
+
+        padding:16px 8px;
+    }
+
+    .time-box h3{
+
+        font-size:24px;
+    }
+
+    .time-box span{
+
+        font-size:8px;
+    }
+
+    .countdown-row{
+
+        gap:8px;
+    }
+
+    .venue-address{
+
+        font-size:15px;
+    }
+}
+
+/* =========================================
+   LARGE PHONES
+========================================= */
+
+@media (min-width:431px){
+
+    .hero-title{
+
+        font-size:76px;
+    }
+
+    .hero-title span{
+
+        font-size:32px;
+    }
+
+    .couple-title{
+
+        font-size:40px;
+    }
+
+    .section-title{
+
+        font-size:34px;
+    }
+}
+
+/* =========================================
+   REMOVE AGGRESSIVE NOWRAP
+========================================= */
+
+.hero-title,
+.hero-title span,
+.couple-title,
+.section-title,
+.person-name,
+.parent-text,
+.address-text,
+.wedding-date,
+.blessing-text,
+.time-box h3,
+.time-box span{
+
+    white-space:normal;
+}
+
+
