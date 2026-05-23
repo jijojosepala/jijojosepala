@@ -502,10 +502,6 @@ body {
 
     width: 100%;
 
-    overflow: visible;
-
-    text-overflow: unset;
-
     text-align: center;
 
     line-height: 1.2;
@@ -525,10 +521,6 @@ body {
     margin-bottom: 5px;
 
     color: #6E5144;
-
-    word-break: break-word;
-
-    overflow-wrap: anywhere;
 
     text-align: center;
 }
