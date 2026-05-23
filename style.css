@@ -234,21 +234,25 @@ body{
 
 .hero-subtext{
 
+    width:100%;
+
+    max-width:320px;
+
+    margin-inline:auto;
+
+    text-align:center;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
     font-size:13px;
 
-    letter-spacing:4px;
+    line-height:1.8;
 
-    line-height:2;
+    color:#f8e8dd;
 
-    margin-bottom:42px;
-
-    color:#fbebdf;
-
-    font-weight:500;
-
-    white-space:nowrap;
-
-    text-shadow:0 2px 16px rgba(255,229,182,0.16);
+    padding-inline:12px;
 }
 
 .hero-buttons{
@@ -448,11 +452,11 @@ body{
 
 .section-mini-title{
 
-    font-size:11px;
+    font-size:13px;
 
     letter-spacing:6px;
 
-    margin-bottom:28px;
+    margin-bottom:36px;
 
     font-weight:700;
 
@@ -504,9 +508,9 @@ body{
 .parent-text{
 
     font-size:
-    clamp(9px, 2.4vw, 14px);
+    clamp(10px, 2.4vw, 10px);
 
-    line-height:1.7;
+    line-height:1.0;
 
     font-weight:600;
 
@@ -522,9 +526,9 @@ body{
 .address-text{
 
     font-size:
-    clamp(8px, 2.2vw, 13px);
+    clamp(10px, 2.2vw, 13px);
 
-    line-height:1.7;
+    line-height:1.0;
 
     color:#85695D;
 
@@ -591,15 +595,17 @@ body{
     white-space:nowrap;
 }
 
+
+
 .blessing-text{
 
-    margin-top:24px;
+    margin-top:44px;
 
     line-height:1.9;
 
     color:#6B4C40;
 
-    font-size:min(22px, 4vw);
+    font-size:min(40px, 4vw);
 
     letter-spacing:0.3px;
 
@@ -906,6 +912,8 @@ body{
     border-radius:36px;
 
     background:
+
+    
     rgba(255,255,250,0.14);
 
     backdrop-filter:blur(26px);
@@ -934,7 +942,7 @@ body{
 
 .venue-section-title{
 
-    color:#f7e3d1;
+    color:#f0ddd2;
 
     text-shadow:0 0 18px rgba(241,203,141,0.16);
 
@@ -943,6 +951,16 @@ body{
     text-align:center;
 
     width:100%;
+
+    font-size:min(11px, 2.5vw);
+
+    letter-spacing:2px;
+
+    line-height:1.8;
+
+    color:#f0ddd2;
+
+    white-space:nowrap;
 }
 
 .venue-list{
@@ -1071,13 +1089,13 @@ body{
 
     font-family:'Cormorant Garamond',serif;
 
-    color:#7b5f4e;
+    color:#7b4e4e;
 
     line-height:1.92;
 
-    font-size:15px;
+    font-size:40px;
 
-    font-weight:500;
+    font-weight:600;
 
     letter-spacing:0.32px;
 
@@ -1142,7 +1160,7 @@ body{
     border-radius:16px;
 
     background:
-    linear-gradient(135deg, #7b001f, #c2184b);
+    linear-gradient(135deg, #941132, #c2184b);
 
     color:white;
 
@@ -1153,6 +1171,9 @@ body{
     letter-spacing:2px;
 
     font-weight:700;
+    
+    border:
+    1px solid rgba(255,220,170,0.75);
 
     box-shadow:
     0 0 0 1px rgba(255,215,160,0.25),
@@ -1410,7 +1431,7 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
     filter:drop-shadow(0 15px 35px rgba(0,0,0,0.5));
     will-change:transform, opacity;
 }
-
+/*
 .intro-logo-glow{
     position:absolute;
     inset:-20%;
@@ -1419,8 +1440,9 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
     background:radial-gradient(circle at center, rgba(232,194,142,0.18), transparent 55%);
     filter:blur(12px);
     animation: glowingLogo 4s ease-in-out infinite;
+    
 }
-
+*/
 @keyframes glowingLogo{
     0% { opacity: 0.25; transform: scale(1); }
     50% { opacity: 0.55; transform: scale(1.05); }
@@ -1447,12 +1469,12 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
 #intro-overlay.opening .intro-logo-wrap,
 #intro-overlay.opening .intro-tap-text,
-#intro-overlay.opening .intro-logo-glow{
+#intro-overlay.opening {
     animation: none;
 }
 
 #intro-overlay.opening .intro-tap-text,
-#intro-overlay.opening .intro-logo-glow{
+#intro-overlay.opening {
     opacity:0;
     transition: opacity 400ms ease;
 }
@@ -1469,7 +1491,7 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 }
 
 @media(prefers-reduced-motion:reduce){
-    .intro-logo-wrap, .intro-logo-glow, .intro-tap-text{
+    .intro-logo-wrap, .intro-tap-text{
         animation:none !important;
     }
 }
@@ -1543,22 +1565,25 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
 .hero-subtext{
 
-    font-size:12px;
+    width:100%;
 
-    letter-spacing:3px;
+    max-width:320px;
 
-    line-height:2;
-
-    margin-bottom:42px;
-
-    color:#fbebdf;
-
-    font-weight:500;
-
-    text-shadow:
-    0 2px 16px rgba(255,229,182,0.16);
+    margin-inline:auto;
 
     text-align:center;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+    color:#f8e8dd;
+
+    padding-inline:12px;
 }
 
 /* INVITATION */
@@ -1615,11 +1640,11 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
 .person-name{
 
-    font-size:16px;
+    font-size:18px;
 
     font-weight:700;
 
-    margin-bottom:14px;
+    margin-bottom:18px;
 
     color:#5A382D;
 
@@ -1631,16 +1656,16 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
     text-align:center;
 
-    line-height:1.2;
+    line-height:1.0;
 
     letter-spacing:0.3px;
 }
 
 .parent-text{
 
-    font-size:11px;
+    font-size:12px;
 
-    line-height:1.0;
+    line-height:0.5;
 
     font-weight:600;
 
@@ -1653,9 +1678,9 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
 .address-text{
 
-    font-size:11px;
+    font-size:12px;
 
-    line-height:1.0;
+    line-height:0.3;
 
     font-weight:00;
 
@@ -1681,15 +1706,17 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
     text-align:center;
 }
 
+
+
 .blessing-text{
 
-    margin-top:24px;
+    margin-top:30px;
 
     line-height:1.9;
 
     color:#6B4C40;
 
-    font-size:18px;
+    font-size:20px;
 
     letter-spacing:0.3px;
 
@@ -1808,7 +1835,7 @@ body.intro-active.intro-revealing > *:not(#intro-overlay){
 
     line-height:1.92;
 
-    font-size:17px;
+    font-size:20px;
 
     font-weight:600;
 
@@ -1986,6 +2013,7 @@ iframe{
 
         font-size:16px;
     }
+    
 
     .time-box{
 
@@ -2015,7 +2043,7 @@ iframe{
 
     .venue-address{
 
-        font-size:15px;
+        font-size:16px;
     }
 }
 
