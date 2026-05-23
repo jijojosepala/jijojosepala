@@ -154,13 +154,15 @@ body {
 
 .hero-card-logo {
 
-    width: clamp(140px, 38vw, 180px);
+    width: clamp(240px, 50vw, 280px);
 
     height: auto;
 
     object-fit: contain;
 
-    margin-bottom: 16px;
+    margin-bottom: 18px;
+
+    transform: translateY(-50px);
 
     filter:
         drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
@@ -260,7 +262,7 @@ body {
 
     color: #f8e8dd;
 
-    padding-inline: 12px;
+    padding-inline: 18px;
 }
 
 .hero-buttons {
@@ -464,7 +466,11 @@ body {
 
     color: #7A5B4E;
 
-    white-space: nowrap;
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
 }
 
 .family-grid {
@@ -484,7 +490,7 @@ body {
 .person-name {
 
     font-size:
-        clamp(11px, 3vw, 22px);
+        clamp(11px, 2vw, 22px);
 
     font-weight: 700;
 
@@ -492,13 +498,13 @@ body {
 
     color: #5A382D;
 
-    white-space: nowrap;
+    white-space: normal;
 
     width: 100%;
 
-    overflow: hidden;
+    overflow: visible;
 
-    text-overflow: ellipsis;
+    text-overflow: unset;
 
     text-align: center;
 
@@ -520,7 +526,9 @@ body {
 
     color: #6E5144;
 
-    word-break: keep-all;
+    word-break: break-word;
+
+    overflow-wrap: anywhere;
 
     text-align: center;
 }
@@ -611,7 +619,7 @@ body {
 
     letter-spacing: 0.3px;
 
-    font-weight: 400;
+    font-weight: 500;
 
     font-family:
         'Great Vibes',
@@ -1312,6 +1320,37 @@ body {
 
         margin-bottom: 8px;
     }
+
+    .section-mini-title,
+    .person-name,
+    .parent-text,
+    .address-text,
+    .couple-title,
+    .wedding-date,
+    .blessing-text {
+
+        white-space: normal !important;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        width: auto;
+        max-width: 100%;
+    }
+
+    .section-mini-title {
+        letter-spacing: 3px;
+        line-height: 1.4;
+        margin-bottom: 22px;
+    }
+
+    .person-name {
+        overflow: visible;
+        text-overflow: unset;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 }
 
 /* INTRO OVERLAY - Cinematic intro animation */
@@ -1586,7 +1625,7 @@ body.intro-active.intro-revealing>*:not(#intro-overlay) {
 
 .person-name {
 
-    font-size: 18.5px;
+    font-size: 18px;
 }
 
 .parent-text {
@@ -1608,7 +1647,8 @@ body.intro-active.intro-revealing>*:not(#intro-overlay) {
 
 .blessing-text {
 
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 /* COUNTDOWN */
@@ -1765,7 +1805,7 @@ iframe {
    COMPACT PHONES
 ========================================= */
 
-@media (max-width:390px) {
+@media (max-width:360px) {
 
     .hero-title {
 
@@ -1783,7 +1823,7 @@ iframe {
 
         font-size: 10px;
 
-        letter-spacing: 2px;
+        letter-spacing: 1px;
     }
 
     .couple-title {
@@ -1798,7 +1838,7 @@ iframe {
 
     .person-name {
 
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .parent-text {
@@ -1818,7 +1858,8 @@ iframe {
 
     .blessing-text {
 
-        font-size: 16px;
+        font-size: 18px;
+        font-weight: 500;
     }
 
 
@@ -1898,4 +1939,89 @@ iframe {
 .time-box span {
 
     white-space: normal;
+}
+
+/* =========================================
+   COMPACT PHONE FIXES
+========================================= */
+
+@media (max-width: 430px) {
+
+    .hero-section {
+        padding: 70px 14px 28px;
+    }
+
+    .hero-card {
+        padding: 28px 12px;
+    }
+
+    .invitation-card {
+        width: min(96vw, 420px);
+        padding: 32px 16px 28px;
+    }
+
+    .family-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .section-mini-title,
+    .hero-title,
+    .hero-title span,
+    .couple-title,
+    .section-title,
+    .person-name,
+    .parent-text,
+    .address-text,
+    .wedding-date,
+    .blessing-text,
+    .venue-item-title,
+    .venue-address,
+    .countdown-text,
+    .calendar-subtext,
+    .invite-btn,
+    .calendar-btn,
+    .venue-btn {
+
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+    }
+
+    .hero-title span {
+        margin: 12px 0;
+        letter-spacing: 5px;
+    }
+
+    .countdown-row {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .time-box {
+        width: 74px;
+        min-width: 74px;
+        max-width: 74px;
+        padding: 14px 8px;
+    }
+
+    .venue-action-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .venue-btn {
+        max-width: 100%;
+    }
+
+    .venue-item {
+        padding: 18px 14px;
+    }
+
+    .venue-section-card,
+    .countdown-card,
+    .calendar-card {
+        padding-inline: 14px;
+    }
 }
