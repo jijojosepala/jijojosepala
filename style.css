@@ -160,9 +160,9 @@ body {
 
     object-fit: contain;
 
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 
-    transform: translateY(-30px);
+    transform: translateY(-20px);
 
     filter:
         drop-shadow(0 4px 12px rgba(0, 0, 0, 0.25));
@@ -262,7 +262,7 @@ body {
 
     color: #f8e8dd;
 
-    padding-inline: 18px;
+    padding-inline: 12px;
 }
 
 .hero-buttons {
@@ -467,10 +467,6 @@ body {
     color: #7A5B4E;
 
     white-space: nowrap;
-
-    overflow-wrap: anywhere;
-
-    word-break: break-word;
 }
 
 .family-grid {
@@ -490,7 +486,7 @@ body {
 .person-name {
 
     font-size:
-        clamp(11px, 2vw, 22px);
+        clamp(11px, 3vw, 22px);
 
     font-weight: 700;
 
@@ -501,6 +497,10 @@ body {
     white-space: nowrap;
 
     width: 100%;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
 
     text-align: center;
 
@@ -609,11 +609,11 @@ body {
 
     color: #6B4C40;
 
-    font-size: min(40px, 4vw);
+    font-size: min(50px, 4vw);
 
     letter-spacing: 0.3px;
 
-    font-weight: 500;
+    font-weight: 400;
 
     font-family:
         'Great Vibes',
@@ -1314,31 +1314,6 @@ body {
 
         margin-bottom: 8px;
     }
-
-    .section-mini-title,
-    .person-name,
-    .parent-text,
-    .address-text,
-    .couple-title,
-    .wedding-date,
-    .blessing-text,
-        
-
-    .section-mini-title {
-        letter-spacing: 3px;
-        line-height: 1.4;
-        margin-bottom: 22px;
-    }
-
-    .person-name {
-        overflow: visible;
-        text-overflow: unset;
-    }
-
-    .family-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
 }
 
 /* INTRO OVERLAY - Cinematic intro animation */
@@ -1613,7 +1588,7 @@ body.intro-active.intro-revealing>*:not(#intro-overlay) {
 
 .person-name {
 
-    font-size: 18px;
+    font-size: 18.5px;
 }
 
 .parent-text {
@@ -1636,7 +1611,6 @@ body.intro-active.intro-revealing>*:not(#intro-overlay) {
 .blessing-text {
 
     font-size: 24px;
-    font-weight: 500;
 }
 
 /* COUNTDOWN */
@@ -1793,7 +1767,7 @@ iframe {
    COMPACT PHONES
 ========================================= */
 
-@media (max-width:360px) {
+@media (max-width:390px) {
 
     .hero-title {
 
@@ -1811,7 +1785,7 @@ iframe {
 
         font-size: 10px;
 
-        letter-spacing: 1px;
+        letter-spacing: 2px;
     }
 
     .couple-title {
@@ -1826,7 +1800,7 @@ iframe {
 
     .person-name {
 
-        font-size: 10px;
+        font-size: 12px;
     }
 
     .parent-text {
@@ -1846,8 +1820,7 @@ iframe {
 
     .blessing-text {
 
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 20px;
     }
 
 
@@ -1926,90 +1899,5 @@ iframe {
 .time-box h3,
 .time-box span {
 
-    white-space: nowrap;
-}
-
-/* =========================================
-   COMPACT PHONE FIXES
-========================================= */
-
-@media (max-width: 430px) {
-
-    .hero-section {
-        padding: 70px 14px 28px;
-    }
-
-    .hero-card {
-        padding: 28px 12px;
-    }
-
-    .invitation-card {
-        width: min(96vw, 420px);
-        padding: 32px 16px 28px;
-    }
-
-    .family-grid {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .section-mini-title,
-    .hero-title,
-    .hero-title span,
-    .couple-title,
-    .section-title,
-    .person-name,
-    .parent-text,
-    .address-text,
-    .wedding-date,
-    .blessing-text,
-    .venue-item-title,
-    .venue-address,
-    .countdown-text,
-    .calendar-subtext,
-    .invite-btn,
-    .calendar-btn,
-    .venue-btn {
-
-        white-space: nowrap;
-        overflow-wrap: anywhere;
-        word-break: break-word;
-    }
-
-    .hero-title span {
-        margin: 12px 0;
-        letter-spacing: 5px;
-    }
-
-    .countdown-row {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-    }
-
-    .time-box {
-        width: 74px;
-        min-width: 74px;
-        max-width: 74px;
-        padding: 14px 8px;
-    }
-
-    .venue-action-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .venue-btn {
-        max-width: 100%;
-    }
-
-    .venue-item {
-        padding: 18px 14px;
-    }
-
-    .venue-section-card,
-    .countdown-card,
-    .calendar-card {
-        padding-inline: 14px;
-    }
+    white-space: normal;
 }
