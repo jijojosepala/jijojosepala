@@ -609,7 +609,7 @@ body {
 
     color: #6B4C40;
 
-    font-size: min(50px, 4vw);
+    font-size: min(18px, 4vw);
 
     letter-spacing: 0.3px;
 
@@ -618,6 +618,38 @@ body {
     font-family:
         'Great Vibes',
         cursive;
+}
+
+/* Bible quote uses same styling as blessing-text */
+.bible-quote {
+
+    margin-top: 44px;
+
+    line-height: 1.9;
+
+    color: #6B4C40;
+
+    font-size: min(38px, 4vw);
+
+    letter-spacing: 0.3px;
+
+    font-weight: 700;
+
+    font-family:
+        'Monotype Corsiva', 
+        cursive;
+}
+
+/* Second bible quote variant (same styling) */
+.bible-quote2 {
+    margin-top: 1px;
+    line-height: 1.9;
+    color: #6B4C40;
+    font-size: min(18px, 4vw);
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    text-align: right;
+    font-family: 'Monotype Corsiva', cursive;
 }
 
 /* COUNTDOWN + CALENDAR */
